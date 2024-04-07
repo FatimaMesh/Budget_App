@@ -1,0 +1,189 @@
+.App {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+}
+/* home style */
+.home {
+  background: rgba(175, 200, 208, 0.438);
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 70%;
+  gap: 1rem;
+  box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px,
+    rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
+}
+.home p {
+  text-align: center;
+  color: #063968;
+}
+.home img {
+  width: 30rem;
+}
+/* basic style */
+h2 {
+  color: #124076;
+  margin: 1rem auto;
+  text-decoration: underline;
+}
+header {
+  padding: 1.5rem;
+  background: url("asset/_.jpeg");
+  border-bottom: 3px solid #124076;
+  text-align: center;
+}
+
+main {
+  display: grid;
+  gap: 1rem;
+  grid-template-areas:
+    "income expense target"
+    "transfer transfer transfer";
+  justify-content: center;
+  text-align: center;
+}
+.income {
+  grid-area: income;
+}
+.expense {
+  grid-area: expense;
+}
+.target {
+  grid-area: target;
+}
+.transfer {
+  grid-area: transfer;
+  text-align: center;
+}
+.container {
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
+    rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  flex: 1;
+}
+
+/* form style  */
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 0.3rem;
+}
+
+form input {
+  border: none;
+  border-bottom: 2px solid #124076;
+  outline: none;
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+  padding: 0.3rem;
+  line-height: 1.5;
+  background-color: whitesmoke;
+  border-radius: 1rem;
+}
+form input:focus {
+  border-bottom: 2px solid lightblue;
+}
+form label,
+p {
+  text-align: left;
+}
+/* button style */
+form button,
+.home button {
+  width: 6rem;
+  background: linear-gradient(to bottom right, #063968, #7c95a5);
+  border: 0;
+  border-radius: 1rem;
+  color: white;
+  cursor: pointer;
+  padding: 0.2rem;
+  line-height: 2;
+  transition: box-shadow 0.2s ease-in-out;
+  margin: 0.5rem;
+}
+
+form button:hover,
+.home button:hover {
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5),
+    -0.125rem -0.125rem 1rem rgba(19, 31, 100, 0.5),
+    0.125rem 0.125rem 1rem rgba(91, 136, 144, 0.5);
+}
+.delete_btn {
+  background: transparent;
+  border: none;
+  color: darkred;
+  cursor: pointer;
+  font-weight: bold;
+}
+.delete_btn:hover {
+  font-weight: normal;
+  color: #063968;
+  box-shadow: none;
+}
+.transfer form {
+  text-align: center;
+  align-items: center;
+}
+/* show style */
+.show_data {
+  margin: 0.5rem;
+  padding: 0.3rem;
+  height: 20vh;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  border: 1px solid lightgrey;
+  list-style: none;
+}
+.show_data li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(173, 216, 230, 0.53);
+  border-radius: 1rem;
+  font-size: 0.9rem;
+  padding: 0.5rem;
+  gap: 1rem;
+}
+.no_content {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.error {
+  color: darkred;
+  font-size: 0.6rem;
+}
+/* small screen */
+@media screen and (max-width: 860px) {
+  main {
+    grid-template-areas:
+      "income expense"
+      "transfer target";
+  }
+  .home img {
+    width: 25rem;
+  }
+}
+@media screen and (max-width: 650px) {
+  main {
+    grid-template-areas:
+      "income"
+      "expense"
+      "transfer"
+      "target";
+  }
+  .home img {
+    width: 20rem;
+  }
+}
+@media screen and (max-width: 300px) {
+  .home img {
+    width: 15rem;
+  }
+}

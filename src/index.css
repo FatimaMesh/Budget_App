@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+body {
+  height: 90vh;
+  text-align: center;
+  margin: 0 auto;
+  overflow: auto;
+  scroll-behavior: smooth;
+}
